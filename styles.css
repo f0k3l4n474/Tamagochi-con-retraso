@@ -75,7 +75,7 @@ body {
 .outer-bezel,
 .middle-bezel,
 .inner-bezel {
-  z-index: 100; 
+  z-index: 100;
 }
 
 .device-2 {
@@ -108,14 +108,16 @@ body {
   z-index: 10;
 }
 
-.icons-interaction .hunger-icon, .icons-interaction .games-icon,
-.icons-interaction .shopping-icon {
-  cursor: pointer; 
+#hunger-button,
+#games-button,
+#shopping-button {
+  cursor: pointer;
   mix-blend-mode: multiply;
   background: transparent;
 }
 
-.icons-interaction .hunger-icon-background, .icons-interaction .games-icon-background,
+.icons-interaction .hunger-icon-background,
+.icons-interaction .games-icon-background,
 .icons-interaction .shopping-icon-background {
   z-index: -4;
   pointer-events: none;
@@ -142,7 +144,7 @@ body {
   top: 15px;
 }
 
-.icons-interaction .hunger-icon {
+#hunger-button {
   top: 30px;
   border-radius: 5px;
   width: 40px;
@@ -158,7 +160,7 @@ body {
   top: 37.5%;
 }
 
-.icons-interaction .games-icon {
+#games-button {
   border-radius: 5px;
   top: 44%;
   width: 40px;
@@ -175,24 +177,22 @@ body {
   bottom: 10px;
 }
 
-.icons-interaction .shopping-icon {
+#shopping-button {
   border-radius: 5px;
   bottom: 22px;
   width: 40px;
   position: absolute;
 }
 
-.icons-interaction .thirst-icon-background {
+.icons-interaction .thirst-icon-background {}
 
-}
-
-.icons-interaction .thirst-icon {
+#thirst-button {
   display: none;
 }
 
 
 .icons-bars {
-  width: 90%;
+  width: 95%;
   height: 5rem;
   background: black;
   position: absolute;
@@ -204,16 +204,65 @@ body {
   justify-content: center;
 }
 
-.icons-bars .hunger-icon, .icons-bars .games-icon,
-.icons-bars .shopping-icon {
-  mix-blend-mode: multiply;
-  background: transparent;
+/* TODO: uncomment when finished .icons-bars */
+#hunger-button,
+#games-button,
+#shopping-button {
+  /* mix-blend-mode: multiply;
+  background: transparent; */
 }
 
-.icons-bars .hunger-icon {
+/* JS */
+#hunger-bar,
+#games-bar,
+#thirst-bar {
+  width: 70px;
+  height: 7px;
+  background: rgb(0, 0, 255);
+  position: absolute;
+  z-index: 10;
+  border: 2px solid rgb(0, 0, 255);
+}
+
+#hunger-bar {
+  left: 15px;
+  top: 50%;
+}
+
+#hunger-icon-bar {
   width: 30px;
   border-radius: 5px;
+  position: absolute;
+  left: 100px;
+  top: 15px;
 }
+
+#games-bar {
+  left: 36%;
+  top: 50%;
+}
+
+#games-icon-bar {
+  width: 30px;
+  border-radius: 5px;
+  position: absolute;
+  right: 140px;
+  top: 15px;
+}
+
+#thirst-bar {
+  right: 60px;
+  top: 50%;
+}
+
+#thirst-icon-bar {
+  width: 25px;
+  border-radius: 5px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
 
 .screen-background {
   width: 100%;
